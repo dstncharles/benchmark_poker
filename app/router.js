@@ -7,11 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('dashboard');
-  this.route('sessions');
-  this.route('equity');
   this.route('opponents');
-  this.route('locations');
-  this.route('hand_range');
 
 });
 
