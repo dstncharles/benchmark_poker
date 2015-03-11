@@ -4,11 +4,10 @@ export default Ember.Route.extend({
   model: function () {
     return {
       chartData: {
-        labels: ['Day1', 'Day2', 'Day3'],
+        labels: ['Player1', 'Player2', 'Player3'],
         series: [
-          [5, 4, 8],
-          [10, 2, 7],
-          [8, 3, 6]
+          [8, 6, 4],
+
         ]
       }
     };
