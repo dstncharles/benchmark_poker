@@ -8,7 +8,7 @@
 <div class="chart-container">
 
   <div class="location">
-    {{chartist-chart type=" line" data=model.chartData}}
+    {{chartist-chart type=" line" data=model.locationData}}
 
     {{#link-to 'location'}}
       <button>I</button>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="opponents">
-    {{chartist-chart type="bar" data=model.chartData}}
+    {{chartist-chart type="bar" data=model.opponentsData}}
 
     {{#link-to 'opponents'}}
       <button>I</button>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="bankroll">
-    {{chartist-chart type=" line" data=model.chartData}}
+    {{chartist-chart type=" line" data=model.bankrollData}}
 
     {{#link-to 'bankroll'}}
       <button>I</button>
