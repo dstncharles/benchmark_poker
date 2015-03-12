@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('opponents');
   this.route('location');
+  this.route('bankroll');
 });
 
 export default Router;

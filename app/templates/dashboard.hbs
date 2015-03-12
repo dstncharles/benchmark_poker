@@ -23,6 +23,14 @@
     {{/link-to}}
   </div>
 
+  <div class="bankroll">
+    {{chartist-chart type=" line" data=model.chartData}}
+
+    {{#link-to 'bankroll'}}
+      <button>I</button>
+    {{/link-to}}
+  </div>
+
 </div>
 
 
