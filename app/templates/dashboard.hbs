@@ -5,5 +5,25 @@
   {{view 'select' content=limits}}
 </div>
 
-{{chartist-chart type="bar" data=model.chartData}}
+<div class="chart-container">
+
+  <div class="location">
+    {{chartist-chart type=" line" data=model.chartData}}
+
+    {{#link-to 'location'}}
+      <button>I</button>
+    {{/link-to}}
+  </div>
+
+  <div class="opponents">
+    {{chartist-chart type="bar" data=model.chartData}}
+
+    {{#link-to 'opponents'}}
+      <button>I</button>
+    {{/link-to}}
+  </div>
+
+</div>
+
+
 {{outlet}}

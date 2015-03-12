@@ -1,0 +1,15 @@
+.chart-container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.location {
+  display: inline-block;
+  width: 500px;
+}
+
+.opponents{
+  display: inline-block;
+  width: 500px;
+  padding-left: 30px;
+}

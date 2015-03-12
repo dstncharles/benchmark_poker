@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('dashboard');
   this.route('opponents');
-
+  this.route('location');
 });
 
 export default Router;
