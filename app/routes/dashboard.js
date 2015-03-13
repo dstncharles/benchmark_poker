@@ -21,6 +21,12 @@ export default Ember.Route.extend({
           [8, 6, 4, 7, 5, 2, 10, 9, 6, 9,],
         ]
       },
+      equityData: {
+        labels: ['Player1', 'Player3', 'Player4'],
+        series: [
+          [8, 6, 4, 5, 6, 4, 5],
+        ]
+      },
     };
   }
 });

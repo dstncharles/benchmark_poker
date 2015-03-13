@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('opponents');
   this.route('location');
   this.route('bankroll');
+  this.route('equity');
 });
 
 export default Router;
