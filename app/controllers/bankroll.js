@@ -5,4 +5,5 @@ export default Ember.Controller.extend({
   game: ['Texas Holdem', 'Omaha'],
   structure: ['No Limit', 'Limit'],
   limits: ['.25-.50', '1-2'],
+
 });
