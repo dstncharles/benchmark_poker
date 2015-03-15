@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('location');
   this.route('bankroll');
   this.route('equity');
+  this.route('hands');
 });
 
 export default Router;
