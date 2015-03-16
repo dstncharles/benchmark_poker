@@ -21,6 +21,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
     "chartist": "0.7.3",
+    "connect-restreamer": "^1.0.1",
     "ember-cli": "0.2.0",
     "ember-cli-app-version": "0.3.1",
     "ember-cli-babel": "^4.0.0",
@@ -34,7 +35,8 @@
     "ember-cli-sass": "^3.1.0",
     "ember-cli-uglify": "1.0.1",
     "ember-export-application-global": "^1.0.2",
-    "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "express": "^4.12.2",
+    "glob": "^4.5.3",
+    "morgan": "^1.5.2"
   }
 }
