@@ -13,6 +13,12 @@ module.exports = function(environment) {
       }
     },
 
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://random-hands.herokuapp.com",
+      'style-src': "'self' *.googleapis.com",
+      'font-src': "'self' *.gstatic.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

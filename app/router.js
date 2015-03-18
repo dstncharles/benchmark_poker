@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('bankroll');
   this.route('equity');
   this.route('hands');
+  this.route('preFlopRaise');
 });
 
 export default Router;
