@@ -11,7 +11,6 @@ export default Ember.Route.extend({
 
      // some of the hands are messed up. We'll filter those out by return only the hands that have seatsInfo
      var cleanData = gameData.filterBy('seatsInfo');
-
      return cleanData;
    });
  }
