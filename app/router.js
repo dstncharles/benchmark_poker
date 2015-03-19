@@ -14,7 +14,7 @@ Router.map(function() {
   this.route('chipsInPlay');
   this.route('preFlopRaise');
   this.route('login');
-  this.route('adapter');
+  this.route('register');
 });
 
 export default Router;
