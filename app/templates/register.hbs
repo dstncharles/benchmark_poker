@@ -1,0 +1,28 @@
+{{outlet}}
+
+
+<form {{action 'save' on="submit"}}>
+  <fieldset>
+
+    <div class="reg-form">
+
+      <span class="user-type">
+        <select>
+          <option value="Customer">Customer</option>
+          <option value="Contractor">Contractor</option>
+        </select>
+      </span>
+
+      {{input type="text" name="email" placeholder="Email Address" value=model.email required=true}}
+      {{input type="password" name="password" placeholder="Choose Password" value=model.password required=true}}
+      {{input type="text" name="firstName" placeholder="First Name" value=model.firstName required=true}}
+      {{input type="text" name="lastName" placeholder="Last Name" value=model.lastName required=true}}
+
+    </div>
+
+    <div class="reg-button">
+      <button class="reg-button" {{action "save"}}>Submit</button>
+    </div>
+
+  </fieldset>
+</form>
