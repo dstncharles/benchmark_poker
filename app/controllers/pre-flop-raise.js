@@ -5,10 +5,10 @@ export default Ember.Controller.extend({
 
   playerAggression: function(){
     return this.get('model').mapBy('preflopActions').map(function(flopActions){
-      return flopActions.map(function(seat){
-        console.log(seat);
-      });
+      console.log(flopActions);
+
     });
+
 
   }.property('model.@each'),
 
