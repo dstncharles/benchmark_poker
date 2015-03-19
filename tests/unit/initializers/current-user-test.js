@@ -1,10 +1,10 @@
 import Ember from 'ember';
-import { initialize } from '../../../initializers/store-service';
+import { initialize } from '../../../initializers/current-user';
 import { module, test } from 'qunit';
 
 var container, application;
 
-module('StoreServiceInitializer', {
+module('CurrentUserInitializer', {
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();

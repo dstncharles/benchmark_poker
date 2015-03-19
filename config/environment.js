@@ -15,8 +15,18 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'connect-src': "'self' https://random-hands.herokuapp.com",
-      'style-src': "'self' *.googleapis.com",
+      'style-src': "'self' *.googleapis.com 'unsafe-inline'",
       'font-src': "'self' *.gstatic.com"
+    },
+
+    'simple-auth': {
+      authorizer: 'authorizer:parse',
+      crossOriginWhitelist: ['https://api.parse.com']
+    },
+
+    parseKeys: {
+      applicationId: "uWEeAo9ey8yg9oHiNhSmfVdqmC6CDzwxEOkNfOeX",
+      restApi: "KN3vVzbcBmJSA14FbQT5FAcFQJ0DAU0wjGx7ooOi"
     },
 
     APP: {
