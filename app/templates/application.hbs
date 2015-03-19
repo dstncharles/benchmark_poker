@@ -1,6 +1,13 @@
 <div class="header">
   <h1>Benchmark Poker</h1>
   <h4>Stats You Can See</h4>
+
+  {{#if session.isAuthenticated}}
+ <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+ <a {{ action 'authenticateSession' }}>Login</a>
+{{/if}}
+
 </div>
 
 {{x-login}}

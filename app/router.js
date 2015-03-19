@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('equity');
   this.route('chipsInPlay');
   this.route('preFlopRaise');
+  this.route('login');
 });
 
 export default Router;

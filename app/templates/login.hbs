@@ -1,0 +1,15 @@
+{{outlet}}
+<form {{action 'authenticate' on="submit"}}>
+  <fieldset>
+
+    <div class="login-form">
+
+      {{input value=identification placeholder='Enter Email' type='email' }}
+
+      {{input value=password placeholder='Enter Password' type='password' }}
+
+      <button type="submit">Login</button>
+    </div>
+
+  </fieldset>
+</form>
