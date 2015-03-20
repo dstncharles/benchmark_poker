@@ -1,22 +1,22 @@
 <div class="header">
 
-  <div class="logo"><h1>Benchmark Poker</h1></div>
+  <div class="logo">
+    <h1>Benchmark Poker</h1>
+  </div>
 
   <div class="logged-in">
     {{#if session.isAuthenticated}}
-   <a {{ action 'invalidateSession' }}>Logout</a>
-  {{else}}
-   <a {{ action 'authenticateSession' }}>Login</a>
-  {{/if}}
+      <a {{ action 'invalidateSession' }}>Logout</a>
+    {{else}}
+      <a {{ action 'authenticateSession' }}>Login</a>
+    {{/if}}
   </div>
 
   <h4>Stats You Can See</h4>
 
 </div>
 
-{{x-login}}
-
-{{outlet}}
+{{x-login}} {{outlet}}
 
 <div class="footer">
   <h5>Benchmark Poker Inc.</h5>

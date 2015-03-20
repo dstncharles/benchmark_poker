@@ -13,5 +13,13 @@ export default Ember.Route.extend({
      var cleanData = gameData.filterBy('seatsInfo');
      return cleanData;
    });
- }
+ },
+
+ actions: {
+  saveComment: function(){
+    this.store.save('goal', this.modelFor('create')).then(function() {
+      this.transitionTo('chips-in-play');
+    }.bind(this));
+  }
+}
 });
