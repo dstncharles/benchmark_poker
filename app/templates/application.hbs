@@ -1,21 +1,11 @@
 <div class="header">
 
-  <div class="logged-in">
-    {{#if session.isAuthenticated}}
-      <a {{ action 'invalidateSession' }}>Logout</a>
-    {{else}}
-      <a {{ action 'authenticateSession' }}>Login</a>
-    {{/if}}
-  </div>
-
-  <header class="navigation" role="banner">
+<header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="javascript:void(0)" class="logo">
-      <img src="assets/images/benchmarkpoker_logo.png" alt="Logo Image">
-      <h4>Stats You Can See</h4>
-    </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
+      <img src="assets/images/benchmarkpoker_logo.png" alt="Logo Image">
+      <h4>Stats You Can See</h4>
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
         <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
@@ -48,15 +38,14 @@
       </ul>
     </nav>
     <div class="navigation-tools">
-      <div class="search-bar">
-        <form role="search">
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-          </button>
-        </form>
-      </div>
       <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+      <div class="logged-in">
+        {{#if session.isAuthenticated}}
+          <a {{ action 'invalidateSession' }}>Logout</a>
+        {{else}}
+          <a {{ action 'authenticateSession' }}>Login</a>
+        {{/if}}
+      </div>
     </div>
   </div>
 </header>
@@ -74,7 +63,7 @@
 
 <footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+    <img src="/assets/images/cards.png" alt="Logo image">
   </div>
     <ul>
       <li><a href="javascript:void(0)">About</a></li>
