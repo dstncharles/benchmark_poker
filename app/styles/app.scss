@@ -21,7 +21,7 @@ h4 {
 
 img {
   padding: 0;
-  
+
 }
 
 header.navigation {
@@ -64,6 +64,7 @@ header.navigation {
     @include clearfix;
     @include outer-container;
     position: relative;
+    max-width: 100%;
     z-index: 9999;
   }
 
