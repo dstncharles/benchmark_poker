@@ -7,9 +7,15 @@
 </ul>
 
 <form {{action 'saveComment' on="submit"}} class="form-container">
-  {{textarea value="Enter comment here..."}}
+  {{textarea value=model.newComment.body}}
   <button class="comment-button" type="submit" {{action "saveComment"}}>Submit</button>
 
 </form>
 
 {{outlet}}
+
+<ul>
+{{#each comment in model.comments}}
+  <li>{{comment.body}}</li>
+{{/each}}
+</ul>
