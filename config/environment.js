@@ -16,7 +16,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "'self' https://random-hands.herokuapp.com",
       'style-src': "'self' *.googleapis.com 'unsafe-inline'",
-      'font-src': "'self' *.gstatic.com"
+      'font-src': "'self' *.gstatic.com",
+      'img-src': "*"
     },
 
     'simple-auth': {
