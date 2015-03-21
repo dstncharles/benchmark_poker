@@ -17,7 +17,7 @@ export default Ember.Route.extend({
 
  actions: {
   saveComment: function(){
-    this.store.save('goal', this.modelFor('create')).then(function() {
+    this.store.save('chips-in-play', this.modelFor('create')).then(function() {
       this.transitionTo('chips-in-play');
     }.bind(this));
   }
