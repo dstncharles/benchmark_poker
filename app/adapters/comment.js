@@ -13,7 +13,27 @@ export default Ember.Object.extend({
     });
   },
 
-  save: function(){
+    save: function(type, record) {
+  if (record.id) {
+    return ajax({
+      url: "https://api.parse.com/1/classes/Comment" + record.id,
+      type: "PUT",
+      data: JSON.stringify(record.toJSON())
+    }).then(function(response) {
+      record.updatedAt = response.updatedAt;
+      return record;
+    });
 
+  } else {
+    return ajax({
+      url:  "https://api.parse.com/1/classes/Comment",
+      type: "POST",
+      data: JSON.stringify(record.toJSON())
+    }).then(function(response) {
+      record.id = response.objectId;
+      record.createdAt = response.createdAt;
+      return record;
+    });
+  }
   }
 });

@@ -6,7 +6,7 @@
   {{/each}}
 </ul>
 
-<form {{action 'saveComment' on="submit"}} class="form-container">
+<form {{action 'save' on="submit"}} class="form-container">
   {{textarea value=model.newComment.body}}
   <button class="comment-button" type="submit" {{action "saveComment"}}>Submit</button>
 

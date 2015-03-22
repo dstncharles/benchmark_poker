@@ -12,6 +12,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveComment: function(){
+      console.log('saveComment function firing');
       this.modelFor('chips-in-play').get('newComment').save();
     }
   },
