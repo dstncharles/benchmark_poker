@@ -1,9 +1,11 @@
 <h1># of hands: {{handCount}}</h1>
 
+{{!-- {{chartist-chart options=chartOptions data=stackSizes}} --}}
+
 <ul>
-  {{#each size in stackSizes}}
-    <li>{{size}}</li>
-  {{/each}}
+ {{#each size in stackSizes}}
+   <li>{{size}}</li>
+ {{/each}}
 </ul>
 
 <form {{action 'save' on="submit"}} class="form-container">
