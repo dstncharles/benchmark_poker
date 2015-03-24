@@ -16,7 +16,7 @@ export default Ember.Object.extend({
     save: function(type, record) {
   if (record.id) {
     return ajax({
-      url: "https://api.parse.com/1/classes/Comment" + record.id,
+      url: "https://api.parse.com/1/classes/Comment/" + record.id,
       type: "PUT",
       data: JSON.stringify(record.toJSON())
     }).then(function(response) {
@@ -35,5 +35,15 @@ export default Ember.Object.extend({
       return record;
     });
   }
-  }
+},
+
+  destroy: function(name, record) {
+     /* jshint unused: false */
+     return ajax({
+       url: "https://api.parse.com/1/classes/Comment/" + record.id,
+       type: "DELETE"
+     });
+   },
+
+
 });

@@ -14,7 +14,7 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'connect-src': "'self' https://random-hands.herokuapp.com, https://api.parse.com",
+      'connect-src': "'self' https://random-hands.herokuapp.com https://api.parse.com",
       'style-src': "'self' *.googleapis.com 'unsafe-inline'",
       'font-src': "'self' *.gstatic.com",
       // 'img-src': "'self' *.http://files.parsefss.com",

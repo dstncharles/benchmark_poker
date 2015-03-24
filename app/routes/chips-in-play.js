@@ -8,26 +8,19 @@ export default Ember.Route.extend({
       // chips: [],
       comments: this.store.findAll('comment'),
       newComment: this.store.createRecord('comment')
+
     });
   },
 
   actions: {
     saveComment: function() {
       this.modelFor('chips-in-play').newComment.save();
-    }
+    },
+
+    destroyComment: function(comment) {
+      comment.destroy();
+    },
   },
-
-
-//   deleteComment: function() {
-//     //if right what gos after deleteComment?
-//     this.modelFor('chips-in-play').deleteComment.destroy();
-//   }
-// },
-//
-// editComment: function() {
-//   this.modelFor('chips-in-play.edit').save();
-// }
-
 
 
 findChipsInPlay: function() {
