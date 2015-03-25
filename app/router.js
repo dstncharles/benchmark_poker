@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('preFlopRaise');
   this.route('login');
   this.route('register');
+  this.route('discuss');
 });
 
 export default Router;

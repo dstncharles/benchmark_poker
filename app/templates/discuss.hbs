@@ -1,31 +1,10 @@
-<div class="top-container">
-  <div class="chipsInPlay">
-    <h1># of hands: {{handCount}}</h1>
-
-    {{!-- {{chartist-chart options=chartOptions data=stackSizes}} --}}
-
-    <ul>
-      {{#each size in stackSizes}}
-        <li>{{size}}</li>
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="preFlopRaise">
-    <h1># of hands: {{handCount}}</h1>
-    <ul>
-      {{chartist-chart type="bar" data=raisers}}
-    </ul>
-  </div>
-</div>
-
 <form {{action "saveComment" on="submit"}} class="form-container">
   {{textarea value=newComment}}
   <button class="comment-button" type="submit">Submit</button>
 </form>
 
 <ul>
-  {{#each comment in model.comments itemController="comment"}}
+  {{#each comment in model itemController="comment"}}
     {{#if comment.isEditing}}
       <li>{{input value=comment.model.body}}</li>
       <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
