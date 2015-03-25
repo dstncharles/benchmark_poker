@@ -3,9 +3,9 @@
 {{!-- {{chartist-chart options=chartOptions data=stackSizes}} --}}
 
 <ul>
- {{#each size in stackSizes}}
-   <li>{{size}}</li>
- {{/each}}
+  {{#each size in stackSizes}}
+    <li>{{size}}</li>
+  {{/each}}
 </ul>
 
 <form {{action 'save' on="submit"}} class="form-container">
@@ -16,14 +16,14 @@
 {{outlet}}
 
 <ul>
-{{#each comment in model.comments itemController="comment"}}
-  {{#if comment.isEditing}}
-    <li>{{input value=comment.model.body}}</li>
-    <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
-  {{else}}
-    <li>{{comment.model.body}}</li>
-    <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
-    <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
-  {{/if}}
-{{/each}}
+  {{#each comment in model.comments itemController="comment" }}
+    {{#if comment.isEditing}}
+      <li>{{input value=comment.model.body}}</li>
+      <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
+    {{else}}
+      <li>{{comment.model.body}}</li>
+      <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
+      <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
+    {{/if}}
+  {{/each}}
 </ul>

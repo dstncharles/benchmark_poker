@@ -22,7 +22,6 @@ export default Ember.Route.extend({
     },
   },
 
-
 findChipsInPlay: function() {
   return ajax('https://random-hands.herokuapp.com/hands/1').then(function(data) {
     // data is an array of snapshots of the hand history after each hand is played

@@ -6,42 +6,22 @@
 </div>
 
 <div class="top-container">
-  <div class="location">
-    {{chartist-chart type="bar" ratio= '.ct-square' data=model.locationData}}
+  <div class="chipsInPlay">
+    {{chartist-chart type="line" ratio= '.ct-square' data=model.chipsInPlayData}}
 
-    {{#link-to 'location'}}
+    {{#link-to 'chipsInPlay'}}
       <button>i</button>
     {{/link-to}}
   </div>
 
-  <div class="opponents">
-    {{chartist-chart type="bar" ratio= '.ct-square' data=model.opponentsData}}
+  <div class="preFlopRaise">
+    {{chartist-chart type="bar" ratio= '.ct-square' data=model.preFlopRaiseData}}
 
-    {{#link-to 'opponents'}}
+    {{#link-to 'preFlopRaise'}}
       <button>i</button>
     {{/link-to}}
   </div>
 </div>
-
-
-  <div class="bankroll">
-    {{chartist-chart type="line" ratio= '.ct-perfect-fourth' data=model.bankrollData}}
-
-    {{#link-to 'bankroll'}}
-      <button>i</button>
-    {{/link-to}}
-  </div>
-
-  <div class="bottom-container">
-    <div class="equity">
-      {{chartist-chart type="line" ratio= '.ct-square' data=model.equityData}}
-
-      {{#link-to 'equity'}}
-        <button>i</button>
-      {{/link-to}}
-    </div>
-  </div>
-
 
 
 {{outlet}}

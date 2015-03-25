@@ -14,17 +14,17 @@ export default Ember.Controller.extend({
 
   handCount: Ember.computed.alias('model.chips.length'),
 
-  // stackSizes: {
-  //   // A labels array that can contain any sort of values
-  //   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-  //   // Our series array that contains series objects or in this case series data arrays
-  //   series: [
-  //     [5, 2, 4, 2, 0]
-  //   ]
-  // },
-  //
-  // chartOptions: {
-  //   width: '300px',
-  //   height: '200px'
-  // }
+  chipsInPlay: {
+    // A labels array that can contain any sort of values
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    // Our series array that contains series objects or in this case series data arrays
+    series: [
+      [this.stackSizes]
+    ]
+  },
+
+  chartOptions: {
+    width: '300px',
+    height: '200px'
+  }
 });
