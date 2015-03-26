@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       chips: this.findChipsInPlay(),
       raises: this.findRaises(),
       comments: this.store.findAll('comment')
+
     });
   },
 

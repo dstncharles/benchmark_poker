@@ -12,12 +12,10 @@ export default Ember.Controller.extend({
       }, 0);
     });
 
-    // return {
-    //   labels: Object.keys(data),
-    //   series: [Ember.$.map(data, function(count){
-    //     return count;
-    //   })]
-    // };
+    return {
+      labels: data,
+      series: [Ember.computed.alias('model.chips.length') ]
+    };
 
   }.property('model.chips.@each'),
 
@@ -49,11 +47,22 @@ export default Ember.Controller.extend({
   }.property('model.raises.@each'),
 
   actions: {
+    /*
+    saveFirstName: function(){
+      var newFirstName = this.store.createRecord('firstName', {
+        body: this.get('newFirstName')
+      });
+      this.set('newFirstName', '');
+      return newFirstName.save();
+    }, */
+
     saveComment: function() {
       var newComment = this.store.createRecord('comment', {
-        body: this.get('newComment')
+        body: this.get('newComment'),
+        firstName: this.get('newFirstName')
       });
       this.set('newComment', '');
+      this.set('newFirstName', '');
       return newComment.save();
     },
 
