@@ -30,15 +30,15 @@
 
 <div class="top-container">
 
-  <div class="preFlopRaise">
-      <h1># of hands: {{handCount}}</h1>
+  <div class="chipsInPlay">
+      <h1>Chips in Play Over {{handCount}} Hands</h1>
       <ul>
           {{chartist-chart type="line" data=stackSizes}}
       </ul>
     </div>
 
   <div class="preFlopRaise">
-    <h1># of hands: {{handCount}}</h1>
+    <h1>Aggressive Players Over {{handCount}} Hands</h1>
     <ul>
       {{chartist-chart type="bar" data=raisers}}
     </ul>
