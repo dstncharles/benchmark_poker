@@ -50,7 +50,7 @@
 -->
 
 <form {{action "saveComment" on="submit"}} class="form-container">
-  {{textarea value=newFirstName placeholder="First Name"}}
+
   <br>
   {{textarea value=newComment placeholder="Your Message"}}
   <br>
@@ -63,7 +63,7 @@
       <li>{{input value=comment.model.body}}</li>
       <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
     {{else}}
-      <li>{{comment.model.firstName}}</li>
+      <li>{{comment.model.createdBy.firstName}}</li>
       <li>{{comment.model.body}}</li>
       <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
       <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
