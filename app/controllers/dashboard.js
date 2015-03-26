@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   stackSizes: function(){
-    // var data = this.get()
     var data = this.get('model.chips').mapBy('seatsInfo').map(function(handSeats){
 
       //pluck(mapBy)
@@ -13,11 +12,19 @@ export default Ember.Controller.extend({
     });
 
     return {
-      labels: data,
-      series: [Ember.computed.alias('model.chips.length') ]
+      labels: this.get('handRange'),
+      series: [data]
     };
 
   }.property('model.chips.@each'),
+
+  handRange: function(){
+    var n = this.get('handCount');
+    // range starts at 0, so add 1 to n and remove the first element
+    var range = Array.apply(null, {length: n + 1}).map(Number.call, Number);
+    range.shift();
+    return range;
+  }.property('handCount'),
 
   handCount: Ember.computed.alias('model.chips.length'),
 
@@ -59,10 +66,9 @@ export default Ember.Controller.extend({
     saveComment: function() {
       var newComment = this.store.createRecord('comment', {
         body: this.get('newComment'),
-        firstName: this.get('newFirstName')
+        createdBy: this.get('session.currentUser')
       });
       this.set('newComment', '');
-      this.set('newFirstName', '');
       return newComment.save();
     },
 

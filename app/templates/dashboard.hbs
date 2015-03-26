@@ -4,6 +4,7 @@
     </div>
 
       <div class='login'>
+
         {{#if session.isAuthenticated}}
           <a {{ action 'invalidateSession'}}>Logout</a>
         {{else}}
@@ -24,21 +25,17 @@
       </div>
   </div>
 </div>
+
 {{x-login}}
 
-
-
 <div class="top-container">
-  <div class="chipsInPlay">
-    <h1># of hands: {{handCount}}</h1>
 
-
-    <ul>
-      {{#each size in stackSizes}}
-        <li>{{size}}</li>
-      {{/each}}
-    </ul>
-  </div>
+  <div class="preFlopRaise">
+      <h1># of hands: {{handCount}}</h1>
+      <ul>
+          {{chartist-chart type="line" data=stackSizes}}
+      </ul>
+    </div>
 
   <div class="preFlopRaise">
     <h1># of hands: {{handCount}}</h1>
