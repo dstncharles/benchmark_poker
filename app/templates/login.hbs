@@ -1,16 +1,25 @@
 {{outlet}}
 
-<form {{action 'authenticate' on="submit"}}>
-  <fieldset>
+
+<div class="login-container">
+
+  <div class="login-logo">
+  </div>
+
+  <div class="login-img">
 
     <div class="login-form">
+      <form {{action 'authenticate' on="submit"}}>
 
-      {{input value=identification placeholder='Enter Email' type='email' }}
+            {{input value=identification placeholder='Enter Email' type='email' }}
 
-      {{input value=password placeholder='Enter Password' type='password' }}
+            {{input value=password placeholder='Enter Password' type='password' }}
 
-      <button type="submit">Login</button>
+            <button type="submit">Login</button>
+      </form>
     </div>
 
-  </fieldset>
-</form>
+  </div>
+
+
+</div>

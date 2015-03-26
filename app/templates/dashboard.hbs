@@ -1,8 +1,37 @@
+<div class="header">
+  <div class="header-container">
+    <div class="header-logo">
+    </div>
+
+      <div class='login'>
+        {{#if session.isAuthenticated}}
+          <a {{ action 'invalidateSession'}}>Logout</a>
+        {{else}}
+          <a {{ action 'authenticateSession'}}>Login</a>
+        {{/if}}
+
+        {{#link-to 'register'}}
+          <a class='login'>Sign-Up</a>
+        {{/link-to}}
+      </div>
+
+      <div class="header-nav">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+  </div>
+</div>
+{{x-login}}
+
+
+
 <div class="top-container">
   <div class="chipsInPlay">
     <h1># of hands: {{handCount}}</h1>
 
-    {{!-- {{chartist-chart options=chartOptions data=stackSizes}} --}}
 
     <ul>
       {{#each size in stackSizes}}
@@ -36,3 +65,25 @@
     {{/if}}
   {{/each}}
 </ul>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+    </div>
+    <div class="footer-nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <ul>
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>GitHub</li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
