@@ -13,9 +13,14 @@ body {
   top: 0;
 
 }
-
+h1 {
+  text-align: center;
+}
 .chipsInPlay{
-  
+
+}
+
+.preFlopRaise{
 }
 
 .login-img {
@@ -118,6 +123,15 @@ body {
   padding-left: 20px;
 }
 
+.comment-box {
+  height: 100px;
+  width: 300px;
+}
+
+textarea {
+  height: 100px;
+  width: 300px;  
+}
 /* Footer */
 
 footer {

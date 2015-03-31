@@ -29,47 +29,49 @@
 {{x-login}}
 
 <div class="top-container">
-
   <div class="chipsInPlay">
-      <h1>Chips in Play Over {{handCount}} Hands</h1>
-      <ul>
-          {{chartist-chart type="line" data=stackSizes}}
-      </ul>
-    </div>
+    <h1>Chips in Play Over {{handCount}} Hands</h1>
+    <ul>
+      {{chartist-chart options=chartOptions type="line" data=stackSizes}}
+    </ul>
+  </div>
 
   <div class="preFlopRaise">
     <h1>Aggressive Players Over {{handCount}} Hands</h1>
     <ul>
-      {{chartist-chart type="bar" data=raisers}}
+      {{chartist-chart options=chartOptions type="bar" data=raisers}}
     </ul>
   </div>
-</div>
-<!--
+</div><!--
 <form /*{{action "newFirstName" on="submit"}} class="form-container">
   {{textarea value=newFirstName}}</form>
 -->
 
-<form {{action "saveComment" on="submit"}} class="form-container">
+{{!-- <div class="commentBox"> --}}
+  <form {{action "saveComment" on="submit"}} class="form-container">
 
-  <br>
-  {{textarea value=newComment placeholder="Your Message"}}
-  <br>
-  <button class="comment-button" type="submit">Submit</button>
-</form>
+   <span class="comment-box">{{textarea value=newComment placeholder="Your Message"}}</span>
+    <br>
+    <button class="comment-button" type="submit">Submit</button>
+  </form>
+{{!-- </div> --}}
 
-<ul>
-  {{#each comment in model.comments itemController="comment"}}
-    {{#if comment.isEditing}}
-      <li>{{input value=comment.model.body}}</li>
-      <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
-    {{else}}
-      <li>{{comment.model.createdBy.firstName}}</li>
-      <li>{{comment.model.body}}</li>
-      <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
-      <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
-    {{/if}}
-  {{/each}}
-</ul>
+
+
+  <ul>
+    {{#each comment in model.comments itemController="comment" }}
+      {{#if comment.isEditing}}
+        <li>{{input value=comment.model.body}}</li>
+        <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
+      {{else}}
+        <li>{{comment.model.createdBy.firstName}}</li>
+        <li>{{comment.model.body}}</li>
+        <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
+        <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
+      {{/if}}
+    {{/each}}
+  </ul>
+
 
 <footer>
   <div class="footer-container">

@@ -75,6 +75,17 @@ export default Ember.Controller.extend({
     destroyComment: function(comment) {
       comment.destroy();
     },
+  },
+
+  chartOptions: {
+    width: '1300px',
+    height: '600px',
+    showArea: true,
+    lineSmooth: false,
+
+    axisX: {
+      showGrid: false
+    }
   }
 
 });
