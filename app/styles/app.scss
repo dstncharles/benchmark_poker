@@ -113,6 +113,14 @@ h1 {
   width: 1300px;
 }
 
+.login {
+  position: relative;
+  font-family: sans-serif bold;
+  color: #979595;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
 .header-nav ul {
   list-style: none;
   padding-left: 0;
@@ -135,7 +143,7 @@ textarea {
 /* Footer */
 
 footer {
-  height: 100px;
+  height: 127px;
   background: #292929;
 }
 
@@ -146,11 +154,11 @@ footer {
 }
 
 .footer-logo {
-  background: url('/assets/images/benchmarkpoker_logo.png');
+  background: url('/assets/images/cards.png');
+  margin: 0 auto;
   width:50px;
   height:50px;
   background-size:contain;
-  display:inline-block;
 }
 
 .footer-nav {
@@ -186,12 +194,4 @@ footer {
 .footer-social li {
   display: inline-block;
   padding-left: 20px;
-}
-
-.login {
-  position: relative;
-  font-family: sans-serif;
-  color: #fff;
-  vertical-align: top;
-  padding-top: 15px;
 }

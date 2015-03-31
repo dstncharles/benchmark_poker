@@ -1,22 +1,14 @@
 <div class="header">
-
-
-
   <div class="header-logo">
   </div>
-
   <div class="ribbon">
-    {{!-- <ul>
-      <li>About</li>
-      <li>Contact</li>
-    </ul> --}}
-
     <div class='login'>
-
+      <a>About |</a>
+      <a>Contact |</a>
       {{#if session.isAuthenticated}}
-        <a {{ action 'invalidateSession'}}>Logout</a>
+        <a {{ action 'invalidateSession'}}>Logout | </a>
       {{else}}
-        <a {{ action 'authenticateSession'}}>Login</a>
+        <a {{ action 'authenticateSession'}}>Login |</a>
       {{/if}}
 
       {{#link-to 'register'}}
@@ -24,7 +16,6 @@
       {{/link-to}}
     </div>
   </div>
-
 </div>
 
 {{x-login}}
