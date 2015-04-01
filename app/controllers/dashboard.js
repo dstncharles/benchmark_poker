@@ -83,9 +83,10 @@ export default Ember.Controller.extend({
     showArea: true,
     lineSmooth: false,
 
+
     axisX: {
       showGrid: false
     }
   }
-
+  
 });

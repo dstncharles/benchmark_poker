@@ -21,20 +21,17 @@
   <div class="chipsInPlay">
     <h1>Chips in Play Over {{handCount}} Hands</h1>
     <ul>
-      {{chartist-chart options=chartOptions type="line" data=stackSizes}}
+      {{chartist-chart options=chartOptions ratio="" type="line" data=stackSizes}}
     </ul>
   </div>
 
   <div class="preFlopRaise">
     <h1>Aggressive Players Over {{handCount}} Hands</h1>
     <ul>
-      {{chartist-chart options=chartOptions type="bar" data=raisers}}
+      {{chartist-chart options=chartOptions ratio="" type="bar" data=raisers}}
     </ul>
   </div>
-</div><!--
-<form /*{{action "newFirstName" on="submit"}} class="form-container">
-  {{textarea value=newFirstName}}</form>
--->
+</div>
 
 <div class="commentBox">
   <form {{action "saveComment" on="submit"}} class="form-container">
