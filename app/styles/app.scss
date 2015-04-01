@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #F2F2F2;
+  background-color: #F0F0F0;
 }
 
 .header-logo {
@@ -103,7 +103,7 @@ h1 {
 }
 
 .ribbon {
-  background-color: red;
+  background-color: #FC010D;
   margin: 0 auto;
   position: inherit;
   top: 138px;
@@ -115,10 +115,11 @@ h1 {
 
 .login {
   position: relative;
-  font-family: sans-serif bold;
+  font-family: garamond semibold;
   color: #979595;
   vertical-align: top;
   padding-top: 15px;
+  font-weight: bold;
 }
 
 .header-nav ul {
@@ -181,7 +182,7 @@ footer {
 
 .footer-social {
   position: relative;
-  color: #fff;
+  color: #979595;
   font-family: sans-serif;
   float:right;
 }

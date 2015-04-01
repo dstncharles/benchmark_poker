@@ -16,7 +16,11 @@
             {{input value=password placeholder='Enter Password' type='password' }}
 
             <button type="submit">Login</button>
-            
+
+            {{#link-to 'register'}}
+            <button type="submit">Register</button>
+            {{/link-to}}
+
       </form>
     </div>
 

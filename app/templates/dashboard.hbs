@@ -6,14 +6,11 @@
       <a>About |</a>
       <a>Contact |</a>
       {{#if session.isAuthenticated}}
-        <a {{ action 'invalidateSession'}}>Logout | </a>
+        <a {{ action 'invalidateSession'}}>Logout </a>
       {{else}}
-        <a {{ action 'authenticateSession'}}>Login |</a>
+        <a {{ action 'authenticateSession'}}>Login </a>
       {{/if}}
 
-      {{#link-to 'register'}}
-        <a class='login'>Register</a>
-      {{/link-to}}
     </div>
   </div>
 </div>
@@ -69,13 +66,7 @@
   <div class="footer-container">
     <div class="footer-logo">
     </div>
-    <div class="footer-nav">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
+
     <div class="footer-social">
       <ul>
         <li>Facebook</li>
