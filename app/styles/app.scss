@@ -137,6 +137,21 @@ h1 {
   width: 300px;
 }
 
+li {
+  list-style-type: none;
+}
+
+.comments {
+   vertical-align: middle;
+   position: relative;
+   margin-left:12px;
+   width:400px;
+   padding:0px 20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+}
+
 textarea {
   height: 70px;
   width: 450px;

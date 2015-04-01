@@ -36,30 +36,35 @@
   {{textarea value=newFirstName}}</form>
 -->
 
-{{!-- <div class="commentBox"> --}}
+<div class="commentBox">
   <form {{action "saveComment" on="submit"}} class="form-container">
 
-   <span class="comment-box">{{textarea value=newComment placeholder="Your Message"}}</span>
+    <span class="comment-box">{{textarea value=newComment placeholder="Your Message"}}</span>
     <br>
     <button class="comment-button" type="submit">Submit</button>
   </form>
-{{!-- </div> --}}
+</div>
 
 
+    <ul>
 
-  <ul>
-    {{#each comment in model.comments itemController="comment" }}
-      {{#if comment.isEditing}}
-        <li>{{input value=comment.model.body}}</li>
-        <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
-      {{else}}
-        <li>{{comment.model.createdBy.firstName}}</li>
-        <li>{{comment.model.body}}</li>
-        <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
-        <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
-      {{/if}}
-    {{/each}}
-  </ul>
+      {{#each comment in model.comments
+     itemController="comment" }}
+     <div class="comments">
+        {{#if comment.isEditing}}
+          <li>{{input value=comment.model.body}}</li>
+          <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
+        {{else}}
+          <li>{{comment.model.createdBy.firstName}}</li>
+          <li>{{comment.model.body}}</li>
+          <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
+          <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
+        {{/if}}
+      </div>
+      {{/each}}
+
+    </ul>
+
 
 
 <footer>
