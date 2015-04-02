@@ -78,8 +78,9 @@ export default Ember.Controller.extend({
   },
 
   chartOptions: {
-    width: '1300px',
-    height: '600px',
+    width: '980px',
+    height: '500px',
+
     showArea: true,
     lineSmooth: false,
 
@@ -88,5 +89,5 @@ export default Ember.Controller.extend({
       showGrid: false
     }
   }
-  
+
 });
