@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="header-logo">
+  </div>
+  <div class="ribbon">
+    <div class='login'>
+      {{#if session.isAuthenticated}}
+        <a {{ action 'invalidateSession'}}>Logout </a>
+      {{else}}
+        <a {{ action 'authenticateSession'}}>Login </a>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+<div class="index-div">
+  <div class="index-pic">
+  </div>
+<p>
+  Benchmark Poker is a stats app that helps you communicate with your friends about your favorite poker games!
+</p>
+</div>
+
+<footer>
+  <img src="assets/images/cards.png" alt="" />
+  <div class="footer-container">
+    Benchmark Poker Inc.
+  </div>
+</footer>
