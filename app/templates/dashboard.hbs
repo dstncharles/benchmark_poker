@@ -14,17 +14,18 @@
 
 {{x-login}}
 
-
+  <h1>Chips in Play Over {{handCount}} Hands</h1>
   <div class="chipsInPlay">
-    <h1>Chips in Play Over {{handCount}} Hands</h1>
       {{chartist-chart options=chartOptions ratio="ct-octave" type="line" data=stackSizes}}
   </div>
 
+  <h1>Aggressive Players Over {{handCount}} Hands</h1>
   <div class="preFlopRaise">
-    <h1>Aggressive Players Over {{handCount}} Hands</h1>
       {{chartist-chart options=chartOptions ratio="ct-octave" type="bar" data=raisers}}
   </div>
 
+
+<div class="comment-module">
 <div class="commentBox">
   <form {{action "saveComment" on="submit"}} class="form-container">
       <span class="comment-box">
@@ -53,7 +54,7 @@
       {{/each}}
 
     </ul>
-
+  </div>
 
 
 <footer>
