@@ -1,67 +1,62 @@
 <div class="header">
-  <div class="header-logo">
-  </div>
-  <div class="ribbon">
-    <div class='login'>
-      {{#if session.isAuthenticated}}
-        <a {{ action 'invalidateSession'}}>Logout </a>
-      {{else}}
-        <a {{ action 'authenticateSession'}}>Login </a>
-      {{/if}}
+    <div class="header-logo">
     </div>
-  </div>
+    <div class="ribbon">
+        <div class='login'>
+            {{#if session.isAuthenticated}}
+            <a {{ action 'invalidateSession'}}>Logout </a> {{else}}
+            <a {{ action 'authenticateSession'}}>Login </a> {{/if}}
+        </div>
+    </div>
 </div>
 
 {{x-login}}
 
-  <h1>Chips in Play Over {{handCount}} Hands</h1>
-  <div class="chipsInPlay">
-      {{chartist-chart options=chartOptions ratio="ct-octave" type="line" data=stackSizes}}
-  </div>
+<h1>Chips in Play Over {{handCount}} Hands</h1>
+<div class="chipsInPlay">
+    {{chartist-chart options=chartOptions ratio="ct-octave" type="line" data=stackSizes}}
+</div>
 
-  <h1>Aggressive Players Over {{handCount}} Hands</h1>
-  <div class="preFlopRaise">
-      {{chartist-chart options=chartOptions ratio="ct-octave" type="bar" data=raisers}}
-  </div>
+<h1>Aggressive Players Over {{handCount}} Hands</h1>
+<div class="preFlopRaise">
+    {{chartist-chart options=chartOptions ratio="ct-octave" type="bar" data=raisers}}
+</div>
 
 
 <div class="comment-module">
-<div class="commentBox">
-  <form {{action "saveComment" on="submit"}} class="form-container">
-      <span class="comment-box">
+    <div class="commentBox">
+        <form {{action "saveComment" on="submit" }} class="form-container">
+            <span class="comment-box">
         {{textarea id="new-comment" value=newComment autoresize=true maxHeight=200 required=true placeholder="Insert a comment here..."}}
       </span>
-    <button class="comment-button" type="submit">Submit</button>
-  </form>
-</div>
+            <button class="comment-button" type="submit">Submit</button>
+        </form>
+    </div>
 
 
     <ul class="comment-ul">
 
-      {{#each comment in model.comments
-     itemController="comment" }}
-     <div class="comments">
-        {{#if comment.isEditing}}
-          <li>{{input value=comment.model.body}}</li>
-          <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
-        {{else}}
-          <li>{{comment.model.createdBy.firstName}}</li>
-          <li>{{comment.model.body}}</li>
-          <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
-          <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
-        {{/if}}
-      </div>
-      {{/each}}
+        {{#each comment in model.comments itemController="comment" }}
+        <div class="comments">
+            {{#if comment.isEditing}}
+            <li>{{input value=comment.model.body}}</li>
+            <button class="comment-delete" type="submit" {{action "save" comment}}>Save</button>
+            {{else}}
+            <li>{{comment.model.createdBy.firstName}}</li>
+            <li>{{comment.model.body}}</li>
+            <button class="comment-edit" type="submit" {{action "edit" comment}}>Edit</button>
+            <button class="comment-delete" type="submit" {{action "destroyComment" comment}}>Delete</button>
+            {{/if}}
+        </div>
+        {{/each}}
 
     </ul>
-  </div>
+</div>
 
 
 <footer>
-  <img src="assets/images/cards.png" alt="" />
-  <div class="footer-container">
-    Benchmark Poker Inc.
-  </div>
-
-
+    <img src="assets/images/cards.png" alt="" />
+    <div class="footer-container">
+        Benchmark Poker Inc.
+    </div>
 </footer>
