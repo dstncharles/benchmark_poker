@@ -3222,7 +3222,7 @@ catch(err) {
 if (runningTests) {
   require("benchmark-poker/tests/test-helper");
 } else {
-  require("benchmark-poker/app")["default"].create({"name":"benchmark-poker","version":"0.0.0.7eee5f6c"});
+  require("benchmark-poker/app")["default"].create({"name":"benchmark-poker","version":"0.0.0.2f9e71ad"});
 }
 
 /* jshint ignore:end */

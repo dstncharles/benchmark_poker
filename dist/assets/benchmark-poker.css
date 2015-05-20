@@ -4,7 +4,7 @@ body {
   background-color: #f0f0f0; }
 
 .header-logo {
-  background: url("/assets/images/benchmarkpoker_logo.png");
+  background: url("assets/images/benchmarkpoker_logo.png");
   width: 590px;
   height: 75px;
   background-size: contain;
@@ -25,7 +25,7 @@ p {
   padding: 65px; }
 
 .index-pic {
-  background: url("/assets/images/poker.jpg") center;
+  background: url("assets/images/poker.jpg") center;
   background-size: cover;
   margin: 0 auto;
   margin-top: 25px;
@@ -42,7 +42,7 @@ h1 {
   font-size: 35px; }
 
 .login-img {
-  background: url("/assets/images/benchmark-logo.png") center;
+  background: url("assets/images/benchmark-logo.png") center;
   background-size: cover;
   width: 1200px;
   height: 800px;
@@ -51,7 +51,7 @@ h1 {
   margin-top: -160px; }
 
 .login-logo {
-  background: url("/assets/images/benchmarkpoker_logo.png") no-repeat;
+  background: url("assets/images/benchmarkpoker_logo.png") no-repeat;
   width: 700px;
   height: 90px;
   margin: 0 auto;
@@ -280,7 +280,7 @@ img {
   padding-left: 20px; }
 
 .footer-logo {
-  background: url("/assets/images/cards.png");
+  background: url("assets/images/cards.png");
   padding-top: 15px;
   margin: 0 auto;
   width: 50px;
